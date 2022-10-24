@@ -1,0 +1,57 @@
+trading_platform[]=bybit,binance
+user_settings
+  wallet_percent_decimal_allowed=None
+  order_contract_name=None
+  order_type=None
+  order_price=None
+  order_direction=None
+  order_number_of=None
+  order_maximum_spacing_distance=None
+  order_minimum_spacing_distance=None
+bybit
+  enum
+    side[]=buy,sell
+    order_type[]=Limit,Market
+  base_endpoint_main[]=https://api.bybit.com,https://api-testnet.bybit.com
+  base_endpoint_test[]=https://api-testnet.bybit.com
+  market_data_endpoint
+    query_all_symbols
+      http_request=GET
+      url=/v2/public/symbols  
+  account_data_endpoint
+    place_active_order
+      http_request=POST
+      url=/v2/private/order/create
+      parameters
+        side=None
+        symbol=None
+        order_type=None
+        symbol=None
+        qty=None
+        price=None
+        timeinforce=None
+    cancel_active_order
+      http_request=POST
+      url=/v2/private/order/cancel
+      parameters
+        symbol=None
+        order_id=None
+    place_conditional_order
+      http_request=POST
+      url=/v2/private/stop-order/create
+      parameters
+        side=None
+        symbol=None
+        order_type=None
+        qty=None
+        base_price=None
+        stop_px=None
+        time_in_force=None
+    symbols_get_all
+      http_request=GET
+      url=/v2/public/symbol
+binance
+  base_endpoint[]=https://api.binance.com
+bitmex
+  base_endpoint[]=https://api.bitmex.com
+

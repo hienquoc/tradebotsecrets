@@ -27,28 +27,28 @@ bybit
   account_data_endpoint
     place_active_order
       http_request=POST
-      url=/v2/private/order/create
+      url[]=/v2/private/order/create,/private/linear/order/create
       parameters
         side=order_direction
         symbol=order_contract_name
         order_type=order_type
-        qty=None
+        qty=order_quantity
         price=order_price
         timeinforce=GoodTillCancel
     cancel_active_order
       http_request=POST
-      url=/v2/private/order/cancel
+      url[]=/v2/private/order/cancel,/private/linear/order/cancel
       parameters
         symbol=None
         order_id=None
     place_conditional_order
       http_request=POST
-      url=/v2/private/stop-order/create
+      url[]=/v2/private/stop-order/create,/private/linear/stop-order/create
       parameters
         side=order_direction
         symbol=order_contract_name
         order_type=order_type
-        qty=None
+        qty=order_quantity
         base_price=order_price
         stop_px=order_price
         time_in_force=GoodTillCancel
@@ -65,4 +65,3 @@ binance
   base_endpoint[]=https://api.binance.com
 bitmex
   base_endpoint[]=https://api.bitmex.com
-

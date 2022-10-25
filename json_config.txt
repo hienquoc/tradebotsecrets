@@ -10,7 +10,7 @@ user_settings
   order_minimum_spacing_distance=None
 bybit
   enum
-    side[]=buy,sell
+    side[]=Buy,Sell
     order_type[]=Limit,Market
   base_endpoint_main[]=https://api.bybit.com,https://api-testnet.bybit.com
   base_endpoint_test[]=https://api-testnet.bybit.com

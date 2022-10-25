@@ -16,8 +16,8 @@
   "bybit": {
     "enum": {
       "side": [
-        "buy",
-        "sell"
+        "Buy",
+        "Sell"
       ],
       "order_type": [
         "Limit",

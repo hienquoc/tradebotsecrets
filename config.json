@@ -38,12 +38,12 @@
         "parameters": {
           "symbol": "None"
         }
+      },
+      "query_coin_price": {
+        "http_request": "GET",
+        "url": "/v2/public/tickers",
+        "parameters": {}
       }
-    },
-    "query_coin_price": {
-      "http_request": "GET",
-      "url": "/v2/public/tickers",
-      "parameters": {}
     },
     "account_data_endpoint": {
       "place_active_order": {

@@ -34,25 +34,39 @@
     "market_data_endpoint": {
       "query_all_symbols": {
         "http_request": "GET",
-        "url": "/v2/public/symbols"
+        "url": "/v2/public/symbols",
+        "parameters": {
+          "symbol": "None"
+        }
       }
+    },
+    "query_coin_price": {
+      "http_request": "GET",
+      "url": "/v2/public/tickers",
+      "parameters": {}
     },
     "account_data_endpoint": {
       "place_active_order": {
         "http_request": "POST",
-        "url": "/v2/private/order/create",
+        "url": [
+          "/v2/private/order/create",
+          "/private/linear/order/create"
+        ],
         "parameters": {
-          "side": "None",
-          "symbol": "None",
-          "order_type": "None",
-          "qty": "None",
-          "price": "None",
-          "timeinforce": "None"
+          "side": "order_direction",
+          "symbol": "order_contract_name",
+          "order_type": "order_type",
+          "qty": "order_quantity",
+          "price": "order_price",
+          "timeinforce": "GoodTillCancel"
         }
       },
       "cancel_active_order": {
         "http_request": "POST",
-        "url": "/v2/private/order/cancel",
+        "url": [
+          "/v2/private/order/cancel",
+          "/private/linear/order/cancel"
+        ],
         "parameters": {
           "symbol": "None",
           "order_id": "None"
@@ -60,20 +74,32 @@
       },
       "place_conditional_order": {
         "http_request": "POST",
-        "url": "/v2/private/stop-order/create",
+        "url": [
+          "/v2/private/stop-order/create",
+          "/private/linear/stop-order/create"
+        ],
         "parameters": {
-          "side": "None",
-          "symbol": "None",
-          "order_type": "None",
-          "qty": "None",
-          "base_price": "None",
-          "stop_px": "None",
-          "time_in_force": "None"
+          "side": "order_direction",
+          "symbol": "order_contract_name",
+          "order_type": "order_type",
+          "qty": "order_quantity",
+          "base_price": "order_price",
+          "stop_px": "order_price",
+          "time_in_force": "GoodTillCancel"
         }
       },
       "symbols_get_all": {
         "http_request": "GET",
         "url": "/v2/public/symbol"
+      }
+    },
+    "wallet_data_endpoints": {
+      "get_wallet_balance": {
+        "http_request": "GET",
+        "url": "/v2/private/wallet/balance",
+        "parameters": {
+          "coin": "order_contract_name"
+        }
       }
     }
   },

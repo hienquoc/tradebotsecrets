@@ -2,30 +2,43 @@
   "genome": {
     "node_gene_list": [
       {
-        "node_gene": {
-          "node_number": "",
-          "node_type": "",
-          "node_z_value": "",
-          "node_position_x": "",
-          "node_position_y": "",
-          "node_position_z": "",
-          "node_bias": "",
-          "node_activation_type": "",
-          "node_a_value": "",
-        }
+        "node_number": "",
+        "node_name": "",
+        "node_z_value": "",
+        "node_position_x": "",
+        "node_position_y": "",
+        "node_position_z": "",
+        "node_bias": "",
+        "node_activation_type": "",
+        "node_a_value": ""
+      },
+      {
+        "node_number": "",
+        "node_name": "",
+        "node_z_value": "",
+        "node_position_x": "",
+        "node_position_y": "",
+        "node_position_z": "",
+        "node_bias": "",
+        "node_activation_type": "",
+        "node_a_value": ""
       }
     ],
     "connection_gene_list": [
       {
-          "connection_gene": {
-            "connection_input_node": "",
-            "connection_output_node": "",
-            "connection_weight": "",
-            "connection_status": "",
-            "connection_innovation_number": ""
-          }
-    }
- ],
-    "page_number": 1
+        "connection_input_node": "",
+        "connection_output_node": "",
+        "connection_weight": "",
+        "connection_status": "",
+        "connection_innovation_number": ""
+      },
+      {
+        "connection_input_node": "",
+        "connection_output_node": "",
+        "connection_weight": "",
+        "connection_status": "",
+        "connection_innovation_number": ""
+      }
+    ]
   }
 }

@@ -1,15 +1,16 @@
 {
   "input_node": [
     {
-      "node_number": 1,
+      "node_number": 0,
       "node_type": "input",
-      "node_z_value": "17422.00",
-      "node_position_x": -0.7373688780783199,
-      "node_position_y": -0.6754902942615236,
+      "node_z_value": "16757.00",
+      "node_position_x": 0.0,
+      "node_position_y": 0.0,
       "node_position_z": 0,
       "node_bias": "",
       "node_activation_type": "",
-      "node_a_value": ""
+      "node_a_value": "",
+      "node_z_value_timestamp": "2022-12-16 22:52:42+00:00"
     },
     {
       "node_number": 1,
